@@ -1,17 +1,15 @@
-<!-- <div class="slider-container">
-  <div class="slider">
-    <img *ngFor="let image of images" [src]="image" [alt]="image" />
-  </div>
-  <button class="prev" (click)="prevImage()">&#10094;</button>
-  <button class="next" (click)="nextImage()">&#10095;</button>
-</div> -->
-
 <div class="slider">
   <div class="slider-wrapper">
-    <img src="assets/images/slide1.jpg">
-    <img src="assets/images/slide2.jpg">
-    <img src="assets/images/slide3.jpg">
+    <img
+      *ngFor="let image of imagePaths"
+      [src]="image"
+      [class.hidden]="!isActive(image)"
+    />
   </div>
   <a class="prev" (click)="previousSlide()">&#10094;</a>
   <a class="next" (click)="nextSlide()">&#10095;</a>
+  <div class="slide-btns">
+    <button (click)="startSlideShow()">Slide</button>
+    <button (click)="stopSlideShow()">Stop</button>
+  </div>
 </div>

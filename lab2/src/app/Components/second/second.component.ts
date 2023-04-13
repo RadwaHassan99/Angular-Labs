@@ -3,31 +3,52 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-second',
   templateUrl: './second.component.html',
-  styleUrls: ['./second.component.css']
+  styleUrls: ['./second.component.css'],
 })
 export class SecondComponent {
-  slideIndex = 1;
+  slideIndex = 0;
+  intervalId: any;
+  imagePaths = [
+    'assets/images/slide1.jpg',
+    'assets/images/slide2.jpg',
+    'assets/images/slide3.jpg',
+  ];
 
   ngOnInit() {
     this.showSlide(this.slideIndex);
   }
 
   nextSlide() {
-    this.showSlide(this.slideIndex += 1);
+    this.slideIndex = (this.slideIndex + 1) % this.imagePaths.length;
+    this.showSlide(this.slideIndex);
   }
 
   previousSlide() {
-    this.showSlide(this.slideIndex -= 1);
+    this.slideIndex =
+      (this.slideIndex - 1 + this.imagePaths.length) % this.imagePaths.length;
+    this.showSlide(this.slideIndex);
   }
 
-  showSlide(n:any) {
-    let i;
+  startSlideShow() {
+    this.intervalId = setInterval(() => {
+      this.slideIndex = (this.slideIndex + 1) % this.imagePaths.length;
+      this.showSlide(this.slideIndex);
+    }, 2000);
+  }
+
+  stopSlideShow() {
+    clearInterval(this.intervalId);
+  }
+
+  showSlide(n: number) {
     const slides = document.getElementsByTagName('img');
-    if (n > slides.length) {this.slideIndex = 1;}
-    if (n < 1) {this.slideIndex = slides.length;}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.add('hidden');
     }
-    slides[this.slideIndex-1].style.display = 'block';
+    slides[n].classList.remove('hidden');
+  }
+
+  isActive(imagePath: string) {
+    return this.imagePaths[this.slideIndex] === imagePath;
   }
 }
