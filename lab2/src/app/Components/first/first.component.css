@@ -46,7 +46,16 @@ p {
   color: #021c3a;
 }
 
-#result{
+/* #result{
   font-weight:lighter;
   color: black;
+} */
+
+#result {
+  display: inline-block;
+  border: 2px solid #ccc;
+  padding: 10px;
+  min-width: 50px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
 }
