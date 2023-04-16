@@ -15,7 +15,9 @@ export class RegistrationComponent {
   studentData = { name: '', age: '' };
   @Output() registerEvent = new EventEmitter();
   Add(){
-    this.studentData = {name:this.stdName,age:this.stdAge};
-    this.registerEvent.emit(this.studentData);
+    if(+this.stdAge>=20 && +this.stdAge<=40 && this.stdName.length>=3){
+      this.studentData = {name:this.stdName,age:this.stdAge};
+      this.registerEvent.emit(this.studentData);
+    }
   }
 }
