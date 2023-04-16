@@ -1,0 +1,30 @@
+<div class="box">
+  <div class="form">
+      <h2>Registration</h2>
+      <div class="inputBox">
+          <input type="text" required="required" [(ngModel)]="stdName">
+          <span class="placeholder" *ngIf="!stdName">Student Name</span>
+          <i></i>
+          <div class="error-message" *ngIf="stdName && stdName.length < 3">Name must be at least 3 characters</div>
+      </div>
+      <div class="inputBox">
+          <input type="number" required="required" [(ngModel)]="stdAge">
+          <span class="placeholder" *ngIf="!stdAge">Student Age</span>
+          <i></i>
+          <div class="error-message" *ngIf="stdAge && (+stdAge < 20 || +stdAge > 40)">Age must be between 20 and 40</div>
+      </div>
+      <input type="submit" value="Add" (click)="Add()">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

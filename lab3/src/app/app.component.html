@@ -1,0 +1,8 @@
+<div>
+  <app-registration (registerEvent)="getData($event)"></app-registration>
+  <app-students [DataFromParent]="parentData" [DataFromParenRegister]="DataFromRegister"></app-students>
+  <!-- <p>Data: {{DataFromRegister | json}}</p> -->
+</div>
+
+
+
