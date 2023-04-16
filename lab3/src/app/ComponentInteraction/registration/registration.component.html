@@ -1,30 +1,40 @@
 <div class="box">
   <div class="form">
-      <h2>Registration</h2>
-      <div class="inputBox">
-          <input type="text" required="required" [(ngModel)]="stdName">
-          <span class="placeholder" *ngIf="!stdName">Student Name</span>
-          <i></i>
-          <div class="error-message" *ngIf="stdName && stdName.length < 3">Name must be at least 3 characters</div>
+    <h2>Registration</h2>
+    <div class="inputBox">
+      <input type="text" required [(ngModel)]="stdName" />
+      <span class="placeholder" *ngIf="!stdName">Student Name</span>
+      <i
+        [ngClass]="{
+          'bi bi-check-circle-fill text-success':
+            stdName && stdName.length >= 3,
+          'bi bi-x-circle-fill text-danger': stdName && stdName.length < 3
+        }"
+      ></i>
+      <div class="error-message" *ngIf="stdName && stdName.length < 3">
+        Name must be at least 3 characters
       </div>
-      <div class="inputBox">
-          <input type="number" required="required" [(ngModel)]="stdAge">
-          <span class="placeholder" *ngIf="!stdAge">Student Age</span>
-          <i></i>
-          <div class="error-message" *ngIf="stdAge && (+stdAge < 20 || +stdAge > 40)">Age must be between 20 and 40</div>
+    </div>
+
+    <div class="inputBox">
+      <input type="number" required [(ngModel)]="stdAge" class="no-spinners"/>
+      <span class="placeholder" *ngIf="!stdAge">Student Age</span>
+      <i
+        [ngClass]="{
+          'bi bi-check-circle-fill text-success':
+            stdAge && +stdAge >= 20 && +stdAge <= 40,
+          'bi bi-x-circle-fill text-danger':
+            stdAge && (+stdAge < 20 || +stdAge > 40)
+        }"
+      ></i>
+      <div
+        class="error-message"
+        *ngIf="stdAge && (+stdAge < 20 || +stdAge > 40)"
+      >
+        Age must be between 20 and 40
       </div>
-      <input type="submit" value="Add" (click)="Add()">
+    </div>
+
+    <input type="submit" value="Add" (click)="Add()" />
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
