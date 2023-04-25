@@ -53,3 +53,9 @@
   background-color: #6c8d93;
 }
 
+.navbar-nav .nav-link.active {
+  color:  #0bfcec;
+}
+
+
+
