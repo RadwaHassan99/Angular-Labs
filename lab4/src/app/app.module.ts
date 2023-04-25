@@ -9,7 +9,17 @@ import { RegisterComponent } from './components/register/register.component';
 import { DetailsComponent } from './components/details/details.component';
 import { TableComponent } from './components/table/table.component';
 import { ErrorComponent } from './components/error/error.component';
+import { RouterModule,Routes  } from '@angular/router';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
+
+let routes:Routes = [
+  {path:"", component:HomeComponent},
+  {path:"students", component:TableComponent},
+  {path:"students/:id", component:DetailsComponent},
+  {path:"register", component:RegisterComponent},
+  {path:"**", component:ErrorComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +32,11 @@ import { ErrorComponent } from './components/error/error.component';
     ErrorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
