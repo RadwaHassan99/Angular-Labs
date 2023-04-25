@@ -42,5 +42,14 @@
 }
 
 .scrolled {
-  background-color: #6c8d93; /* Change this to the color you want when scrolling */
+  background-color: #6c8d93; 
 }
+
+.transparent {
+  background-color: transparent;
+}
+
+.black {
+  background-color: #6c8d93;
+}
+
