@@ -86,6 +86,7 @@ button:focus {
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  text-decoration: none;
 }
 .ti-facebook:before {
   content: "\e741";
@@ -110,7 +111,7 @@ button:focus {
 
 .btn_get_two:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #a585fd;
 }
 
 .new_footer_top .f_social_icon a:hover {
