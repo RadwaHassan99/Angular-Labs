@@ -16,7 +16,7 @@
     <!-- <app-root></app-root> -->
 
     <div class="banner">
-      <nav class="navbar navbar-expand-md">
+      <nav class="navbar navbar-expand-md fixed-top">
         <a class="navbar-brand" href="#">
           <img class="logo" src="assets/images/logo.png" loading="lazy" width="120px" height="60px">
         </a>
@@ -62,6 +62,7 @@
       </div>
     </div>
 
+<main>
     <section class="page-header-list container-fluid container-md">
       <div
         class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center"
@@ -71,7 +72,7 @@
             <div class="display-3 mb-2 text-info">
               <i class="zmdi zmdi-accounts"></i>
             </div>
-            <h5>Accounts</h5>
+            <h4 class="bold" style="color: #09363f">Accounts</h4>
             <p class="mb-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -83,7 +84,7 @@
             <div class="display-3 mb-2 text-success">
               <i class="zmdi zmdi-calendar-note"></i>
             </div>
-            <h5>Diary Checker</h5>
+            <h4 class="bold" style="color: #09363f">Diary Checker</h4>
             <p class="mb-0">Phasellus id lectus vitae sem tincidunt posuere.</p>
             <a href="#" class="stretched-link"></a>
           </div>
@@ -93,7 +94,7 @@
             <div class="display-3 mb-2 text-warning">
               <i class="zmdi zmdi-comments"></i>
             </div>
-            <h5>Support</h5>
+            <h4 class="bold" style="color: #09363f">Support</h4>
             <p class="mb-0">
               Duis nisl urna, volutpat et augue eu, consequat imperdiet eros.
             </p>
@@ -455,6 +456,7 @@
         </div>
       </div>
     </div>
+  </main>
     <!-- footer //-->
       <footer class="new_footer_area bg_color pt-5 pb-5 mt-5 border-top">
         <div class="new_footer_top">
@@ -528,5 +530,12 @@
             </div>
         </div>
     </footer>
+    <script>
+      window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('scrolled', window.scrollY > 0);
+});
+
+    </script>
   </body>
 </html>

@@ -22,6 +22,8 @@
   background-size: cover;
   background-position: center;
 }
+
+
 .navbar-brand {
   margin-left: 5px;
 }
@@ -66,7 +68,9 @@
   margin-right: 0; /* Remove margin from the last item */
 }
 
-
+.navbar.scrolled {
+  background-color: #396f76; /* Change this to the color you want when scrolling */
+}
 
 .content {
   width: 100%;
@@ -320,7 +324,7 @@ p {
 
 .contact_info_sec {
   position: absolute;
-  background-color: #023050;
+  background-color: #004c56;
   right: 1px;
   top: 10%;
   padding: 40px;
@@ -346,7 +350,7 @@ p {
 }
 
 button.contact_form_submit {
-  background: linear-gradient(to top right, #1325e8 -5%, #0cd4ee 100%);
+  background-color:#004c56;
   border: none;
   color: #fff;
   padding: 10px 15px;
@@ -359,7 +363,7 @@ button.contact_form_submit {
 }
 
 button.contact_form_submit:hover{
-  background:linear-gradient(to top right, #050c5b -5%, #004953 100%);
+  background-color:#002025;
 }
 
 
