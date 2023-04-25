@@ -29,14 +29,14 @@ let routes:Routes = [
     RegisterComponent,
     DetailsComponent,
     TableComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

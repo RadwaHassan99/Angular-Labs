@@ -1,8 +1,11 @@
-<section class="vh-100" style="margin-top: 3%">
+<section class="vh-100" style="margin-top: 7%">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
         <div class="card text-black" style="border-radius: 25px">
+          <div  #successMessage class="alert alert-success text-center" role="alert" style="display:none">
+            Registration successful!
+          </div>
           <div class="card-body p-md-5">
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
@@ -149,6 +152,13 @@
                           "
                           >Phone number must be 11 digits</small
                         >
+                        <small
+                        class="text-danger"
+                        *ngIf="
+                          registrationForm.get('phone')?.hasError('maxlength')
+                        "
+                        >Phone number must be 11 digits</small
+                      >
                       </div>
                     </div>
                   </div>
@@ -187,30 +197,6 @@
       </div>
     </div>
   </div>
-  <div class="text-center">
-    <!-- Button HTML (to Trigger Modal) -->
-    <button data-target="#myModal" class="trigger-btn" data-toggle="modal">Click to Open Success Modal</button>
-  </div>
-  
-  <!-- Modal HTML -->
-  <div id="myModal" class="modal fade">
-    <div class="modal-dialog modal-confirm">
-      <div class="modal-content">
-        <div class="modal-header justify-content-center">
-          <div class="icon-box">
-            <i class="material-icons">&#xE876;</i>
-          </div>
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body text-center">
-          <h4>Great!</h4>	
-          <p>Your account has been created successfully.</p>
-          <button class="btn btn-success" data-dismiss="modal"><span>Start Exploring</span> <i class="material-icons">&#xE5C8;</i></button>
-        </div>
-      </div>
-    </div>
-  </div>     
- 
 </section>
 
 
