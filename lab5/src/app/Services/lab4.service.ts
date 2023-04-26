@@ -22,4 +22,10 @@ export class Lab4Service {
   deleteUser(id: any) {
     return this.myClient.delete(this.Base_URL + '/' + id);
   }
+
+  addUser(data: any) {
+    return this.myClient.post(this.Base_URL, data);
+  }
+
+
 }

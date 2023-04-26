@@ -1,37 +1,46 @@
 <div class="container">
+  <div class="row mb-3">
+    <div class="col-12 d-flex justify-content-end">
+      <button type="button" class="btn btn-success" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"[routerLink]="'/students/add'">
+        <i class="bi bi-plus-lg"></i> Add Student
+      </button>
+    </div>
+  </div>
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered">
-        <thead class="text-center">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Email</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Address</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="text-center" *ngFor="let s of students">
-            <th scope="row">{{s.id}}</th>
-            <td>{{s.name}}</td>
-            <td>{{s.age}}</td>
-            <td>{{s.email}}</td>
-            <td>{{s.phone}}</td>
-            <td>{{s.address}}</td>
-            <td class="d-flex flex-row justify-content-around">
-              <a type="button" class="btn btn-primary" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"[routerLink]="'/students/' + s.id"><i class="bi bi-eye"></i></a>
-              <a type="button" class="btn btn-success" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"[routerLink]="'/students/' + s.id + '/edit'"><i class="bi bi-pencil-square"></i></a>
-              <a type="button" class="btn btn-danger" (click)="onDeleteUser(s.id)"><i class="bi bi-trash"></i></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="card shadow">
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead class="text-center">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center" *ngFor="let s of students">
+                <th scope="row">{{s.id}}</th>
+                <td>{{s.name}}</td>
+                <td>{{s.age}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.phone}}</td>
+                <td>{{s.address}}</td>
+                <td class="d-flex flex-row justify-content-around">
+                  <a type="button" class="btn btn-primary" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"[routerLink]="'/students/' + s.id"><i class="bi bi-eye"></i></a>
+                  <a type="button" class="btn btn-success" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"[routerLink]="'/students/' + s.id + '/edit'"><i class="bi bi-pencil-square"></i></a>
+                  <a type="button" class="btn btn-danger" (click)="onDeleteUser(s.id)"><i class="bi bi-trash"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-
 
