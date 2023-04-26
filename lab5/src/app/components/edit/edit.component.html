@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">Edit Form</h5>
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" formControlName="name">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="id" placeholder="Enter your ID" formControlName="id" readonly>
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="age" placeholder="Enter your age" formControlName="age">
+            </div>
+            <div class="form-group mb-3">
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" formControlName="email">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" formControlName="phone">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="address" placeholder="Enter your address" formControlName="address">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

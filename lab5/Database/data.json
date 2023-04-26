@@ -1,0 +1,20 @@
+{
+  "students": [
+    {
+      "name": "Radwa ",
+      "id": 1,
+      "age": "24",
+      "email": "radwa.prof.9@gmail.com",
+      "phone": "+201022190637",
+      "address": "5-Mustafa Kamel Street, Abu Qir"
+    },
+    {
+      "id": 6,
+      "name": "Osama",
+      "age": 26,
+      "email": "osama@gmail.com",
+      "phone": "0444444",
+      "address": "streatt, Alexandria"
+    }
+  ]
+}

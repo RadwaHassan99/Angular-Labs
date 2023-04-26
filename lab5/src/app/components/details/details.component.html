@@ -1,0 +1,65 @@
+<div class="page-content page-container m-5" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-xl-9 col-md-12">
+        <div class="card user-card-full">
+          <div class="row m-l-0 m-r-0 w-100">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+              <div class="card-block text-center h-100">
+                <div class="m-b-25 p-5" >
+                  <img
+                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                    class="img-radius m-5"
+                    alt="User-Profile-Image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8 mt-4 mb-4" *ngIf="student; else falseBlock">
+              <div class="card-block">
+                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600 d-inline-block">ID:</p>
+                    <h6 class="text-muted f-w-400 d-inline-block">{{student.id}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600 d-inline-block">Name:</p>
+                    <h6 class="text-muted f-w-400 d-inline-block"> {{student.name}}</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600 d-inline-block">Email:</p>
+                    <h6 class="text-muted f-w-400 d-inline-block">{{student.email}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600 d-inline-block">Phone:</p>
+                    <h6 class="text-muted f-w-400 d-inline-block">{{student.phone}}</h6>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600 d-inline-block">Age:</p>
+                    <h6 class="text-muted f-w-400 d-inline-block">{{student.age}}</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600 d-inline-block">Addres: </p>
+                    <h6 class="text-muted f-w-400 d-inline-block">{{student.address}}</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #falseBlock>
+  <h1 class="alert alert-danger">Loading...</h1>
+</ng-template>
+
+
+
