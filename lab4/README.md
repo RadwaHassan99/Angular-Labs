@@ -2,8 +2,9 @@
 # Angular Students Blog UI
 
 ## Introduction
-This project is a user interface design for a students blog created with Angular.<br>
+This project is a user interface design use 'Reactive Routing' for a students blog created with Angular.<br>
 It provides a clean and user-friendly interface for registering new student , viewing a list of students and their details.
+
 
 ## Installation
 To view the UI design of this project, follow these steps:
@@ -22,12 +23,12 @@ To view the UI design of this project, follow these steps:
 ![screencapture-localhost-4200-students-2023-04-25-21_41_34](https://user-images.githubusercontent.com/63107268/234386549-ed39bef8-ac1e-4e82-b6fb-1e6a557d4b88.png)
 
 
-## Register new Student with validation
+## Student Card
 ![screencapture-localhost-4200-students-5-2023-04-25-21_42_49](https://user-images.githubusercontent.com/63107268/234386545-e1d75e23-43c2-4108-948c-754d999e6f93.png)
 
 <hr>
 
-## 
+## Register new Student with validation
 ![screencapture-localhost-4200-register-2023-04-25-21_42_01](https://user-images.githubusercontent.com/63107268/234386535-d1c3478b-e202-434a-845d-47a724723161.png)
 
 <hr>
