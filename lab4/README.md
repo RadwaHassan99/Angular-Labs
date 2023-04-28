@@ -1,4 +1,19 @@
-# Lab4
+
+# Angular Students Blog UI
+
+## Introduction
+This project is a user interface design for a students blog created with Angular.<br>
+It provides a clean and user-friendly interface for viewing a list of students and their details.
+
+## Installation
+To view the UI design of this project, follow these steps:
+
+1. Clone the repository
+2. Install the dependencies with `npm install`
+3. Run the application with `ng serve`
+
+
+
 ![screencapture-localhost-4200-2023-04-25-21_41_02](https://user-images.githubusercontent.com/63107268/234386557-ef8737fe-0671-4d45-a1e6-b4d2a846458a.png)
 
 
