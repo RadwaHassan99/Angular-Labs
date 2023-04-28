@@ -15,7 +15,7 @@ To view the UI design of this project, follow these steps:
 
 
 <div style="display:flex; justify-content:center;">
-  <img src="https://user-images.githubusercontent.com/63107268/234386557-ef8737fe-0671-4d45-a1e6-b4d2a846458a.png" width="250" height="500" alt="Home">
+  <img src="https://user-images.githubusercontent.com/63107268/234386557-ef8737fe-0671-4d45-a1e6-b4d2a846458a.png" width="250" height="700" alt="Home"><br>
   <img src="https://user-images.githubusercontent.com/63107268/234386549-ed39bef8-ac1e-4e82-b6fb-1e6a557d4b88.png" width="250" height="250" alt="Table of Students">
   <img src="https://user-images.githubusercontent.com/63107268/234386545-e1d75e23-43c2-4108-948c-754d999e6f93.png" width="250" height="250" alt="Student Card">
 </div>
