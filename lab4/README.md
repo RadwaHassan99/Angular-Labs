@@ -15,7 +15,7 @@ To view the UI design of this project, follow these steps:
 
 
 <div style="display:flex; justify-content:center;">
-  <img src="https://user-images.githubusercontent.com/63107268/234386557-ef8737fe-0671-4d45-a1e6-b4d2a846458a.png" width="250" height="700" alt="Home"><br>
+  <img src="https://user-images.githubusercontent.com/63107268/234386557-ef8737fe-0671-4d45-a1e6-b4d2a846458a.png" width="250" height="700" alt="Home">
 </div>
 
 <div style="display:flex; justify-content:center;">
